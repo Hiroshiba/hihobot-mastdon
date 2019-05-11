@@ -44,6 +44,9 @@ class Runner(StreamListener):
             if self.me.username == from_username:
                 return
 
+            if toot.account.bot:
+                return
+
             in_text = _remove_mention_word(_remove_html_tag(toot['content']))
 
             vec = self.hihobot.text_to_vec(in_text)

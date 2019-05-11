@@ -47,6 +47,9 @@ class Runner(StreamListener):
             if self.me.username == from_username:
                 return
 
+            if toot.account.bot:
+                return
+
             vec = self.hihobot.text_to_vec(in_text)
             out_text = self.hihobot.generate(vec=vec)
             out_text = f'@{from_username} {out_text}'

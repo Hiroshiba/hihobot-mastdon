@@ -1,10 +1,8 @@
-from pprint import pprint
+import threading
 from time import sleep
 from typing import List, Optional
 
 import fire
-
-import threading
 
 from run_auto_myname import run_auto_myname
 from run_auto_reply import run_auto_reply
